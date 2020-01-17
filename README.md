@@ -5,7 +5,10 @@ Listen to device orientation changes in React Native applications and programmat
 
 ## Installing
 
+## ADD A LINE IN package.json
+
 ```
+"react-native-orientation": "https://github.com/joaodematejr/react-native-orientation.git"
 
 ```
 
