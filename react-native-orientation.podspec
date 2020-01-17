@@ -1,22 +1,18 @@
 require 'json'
-
-package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
+package_json = JSON.parse(File.read('package.json'))
 
 Pod::Spec.new do |s|
-  s.name           = package['name']
-  s.version        = package['version']
-  s.summary        = package['description']
-  s.description    = package['description']
-  s.license        = package['license']
-  s.author         = package['author']
-  s.homepage       = package['homepage']
-  s.source         = { :git => 'https://github.com/yamill/react-native-orientation.git', :tag => s.version }
 
-  s.requires_arc   = true
-  s.platform       = :ios, '7.0'
-
-  s.preserve_paths = 'README.md', 'package.json', 'index.js'
-  s.source_files   = 'iOS/RCTOrientation/*.{h,m}'
+  s.name           = "react-native-orientation"
+  s.version        = package_json["version"]
+  s.summary        = package_json["description"]
+  s.homepage       = "https://github.com/joaodematejr/react-native-orientation"
+  s.license        = package_json["license"]
+  s.author         = { package_json["author"] => package_json["author"] }
+  s.platform       = :ios, "9.0"
+  s.source         = { :git => "https://github.com/joaodematejr/react-native-orientation" } 
+  s.source_files   = 'ios/RCTOrientation/*.{h,m}'
 
   s.dependency 'React'
+
 end
