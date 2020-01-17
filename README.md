@@ -11,7 +11,16 @@ npm install react-native-orientation --save
 
 ## Linking Native Dependencies
 
+## React native version 60 and above
+
+If you are using react native version 0.60 or above you do not have to link this library.
+
+```
+cd ios && pod install && cd ..
+```
+
 ### Automatic Linking
+
 
 ```
 react-native link react-native-orientation
