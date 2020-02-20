@@ -3,7 +3,7 @@ package_json = JSON.parse(File.read('package.json'))
 
 Pod::Spec.new do |s|
 
-  s.name           = "react-native-new-orientation"
+  s.name           = "react-native-orientation"
   s.version        = package_json["version"]
   s.summary        = package_json["description"]
   s.homepage       = "https://github.com/joaodematejr/react-native-orientation"
